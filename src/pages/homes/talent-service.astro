@@ -1,0 +1,63 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Squareboxes from '~/components/widgets/squareboxes.astro';
+import Container from '~/components/MyCustomComponents/Container.astro';
+const metadata = {
+  title: 'About Us',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Talent Service"
+    title=""
+    subtitle="At Advic.io, we offer flexible and comprehensive hiring solutions to meet your specific business needs, including Staff Augmentation, Self-Managed Teams, and Full Outsourcing."
+    image={{
+      src: '~/assets/images/rodeo-project-management-software-ONe-snuCaqQ-unsplash.jpg',
+      alt: 'AstroWind Hero Image',
+    }}
+  />
+
+  <Container className=" md:mt-10">
+    <header class="mx-auto max-w-3xl md:mb-2 text-center mb-10">
+      <div class="mx-auto dark:text-slate-400 font-medium md:mt-3 mt-2 text-gray-500 text-xl">
+        No matter which hiring solution you choose, you can count on Advic.io's expertise, professionalism, and
+        commitment to delivering exceptional results. Our team of skilled professionals is dedicated to understanding
+        your requirements and providing tailored solutions that align with your business goals. With Advic.io as your
+        strategic technology partner, you gain access to a reliable and proficient team that can take your projects to
+        the next level, fostering innovation, growth, and success for your business
+      </div>
+    </header>
+  </Container>
+
+  <Squareboxes
+    title=""
+    subtitle=""
+    items={[
+      {
+        title: 'Staff Augmentation',
+        description:
+          'With our Self-Managed Teams, we assemble a group of specialized professionals who work collaboratively to address your specific project requirements. You have the freedom to define the project scope and deliverables while entrusting our team with project management and execution. This option offers a balance of control and expertise to ensure successful project outcomes.',
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Self-Managed Teams',
+        description: `Our Full Outsourcing service provides end-to-end management of your projects. We take care of every aspect, from initial planning to execution and delivery. By outsourcing your projects to us, you can focus on your core business while we handle the technical aspects, ensuring high-quality results, cost-effectiveness, and timely completion.`,
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Full Outsourcing',
+        description:
+          'Harness the power of artificial intelligence with our cutting-edge AI solutions. From machine learning algorithms to natural language processing, we offer services that transform data into actionable insights, automate tasks, and enhance decision-making.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Squareboxes>
+</Layout>

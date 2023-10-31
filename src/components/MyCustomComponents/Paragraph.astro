@@ -1,0 +1,16 @@
+---
+export interface Props{
+    className?:string
+}
+
+// const {className} = Astro.props
+---
+<p class="text-xl text-gray-900 dark:text-white MainScreen">
+    <slot/>
+</p>
+
+<style>
+    .MainScreen{
+        letter-spacing:-0.00em !important;
+    }
+</style>

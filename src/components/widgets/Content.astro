@@ -1,0 +1,59 @@
+---
+import type { Content } from '~/types';
+import WidgetWrapper from '../ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+
+const {
+  content = await Astro.slots.render('content'),
+  image = await Astro.slots.render('image'),
+  isReversed = false,
+  isAfterContent = false,
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+  cssbg = false,
+} = Astro.props as Content;
+---
+
+<WidgetWrapper
+  id={id}
+  isDark={isDark}
+  containerClass={`max-w-7xl mx-auto ${isAfterContent ? 'pt-0 md:pt-0 lg:pt-0' : ''} ${classes?.container ?? ''}`}
+  bg={bg}
+>
+  <div class="mx-auto max-w-7xl p-4 md:px-8 mb-10">
+    <div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
+      <div class="md:basis-1/2 self-center">
+        {content && <div class="mb-12 text-lg dark:text-slate-400" set:html={content} />}
+      </div>
+      <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
+        
+        {
+          image && (
+            <div class="relative m-auto max-w-4xl">
+              { cssbg &&
+                <span style="top: -80px;left: 10px;" class="absolute w-20 h-20 rotate-90 skew-x-12 rounded-3xl bg-green-400 blur-xl opacity-100 lg:opacity-95 lg:block hidden" />
+              <span style="bottom: -30px;right: -21px;" class="absolute w-24 h-24 rounded-3xl bg-primary blur-xl opacity-80" />   
+              }
+              <span class="absolute w-full aspect-[16/5] -skew-x-12 rounded-full bg-gradient-to-tr from-primary to-green-400 opacity-40 blur-2xl left-0 bottom-0"></span>
+              {typeof image === 'string' ? (
+                <Fragment set:html={image} />
+              ) : (
+                <Image
+                  class="mx-auto  rounded-lg "
+                  width={600}
+                  height={400}
+                  widths={[300, 668]}
+                  sizes="(max-width: 768px) 100vw, 432px"
+                  layout=""
+                  {...(image as any)}
+                />
+              )}
+            </div>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</WidgetWrapper>

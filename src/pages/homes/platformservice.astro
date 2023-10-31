@@ -1,0 +1,87 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Container from '~/components/MyCustomComponents/Container.astro';
+import Paragraph from '~/components/MyCustomComponents/Container.astro';
+import Image from '~/components/common/Image.astro';
+import HowWeWork from '~/components/MyCustomComponents/HowWeWork.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contact',
+};
+---
+
+<Layout metadata={metadata}>
+  <Container className="space-y-20 md:sapce-y-20">
+    <header class="mx-auto max-w-3xl mb-2 md:mb-2 text-center">
+      <h1 class="" style="font-size: 40px; font-weight: bolder;">Platform Proficiency</h1><div
+        class="mx-auto dark:text-slate-400 font-medium md:mt-3 mt-2 text-gray-500 text-xl"
+      >
+        Maximize business efficiency by promptly tackling essential needs with our Platform mastery, setting your
+        application apart from competitors.
+      </div>
+    </header>
+  </Container>
+  
+  <HowWeWork
+    image={{
+      src: '~/assets/images/d365-tech.jpeg',
+      alt: 'CRm Image',
+    }}
+  >
+    <Fragment slot="mycustomcontent">
+      <div class="row">
+        <div class="col-4 col-md-4">
+          <h1 class="text-heading-1 font-semibold text-2xl sm:text-3xl md:text-4xl md:mb-3">MICROSOFT DYNAMICS</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4 col-md-4">
+          <font class="">
+            Microsoft Dynamics 365 CRM is a cloud-based customer relationship management (CRM) software solution that
+            empowers businesses to engage with customers effectively, streamline sales and marketing processes, and
+            enhance customer service. It offers a unified platform to manage leads, opportunities, and customer
+            interactions, fostering stronger relationships and driving growth. With advanced analytics and AI-driven
+            insights, businesses gain valuable data-driven intelligence to make informed decisions. Dynamics 365 CRM
+            integrates with other Microsoft applications seamlessly, enabling a comprehensive view of customer
+            interactions across departments. Its user-friendly interface, scalability, and extensive customization
+            options make it a powerful tool for organizations seeking to optimize customer relationship management and
+            boost productivity.
+          </font>
+        </div>
+      </div>
+    </Fragment>
+  </HowWeWork>
+
+
+  <Features2
+  title="CRM SERVICE"
+  subtitle=""
+  items={[
+    {
+      title: 'Custom CRM Development',
+      description:
+        'DEVELOP CRM AS PER YOUR FUNCTIONAL NEED: Advic.io offers CRM customization services tailored to the unique needs of each customer. With in-depth requirement analysis, seamless integration, and personalized workflows, our custom CRM solutions align perfectly with your business processes. From data migration and advanced analytics to mobile accessibility and user training, we ensure a scalable and secure CRM system that optimizes customer relationship management. With ongoing support and a customer-centric approach, our CRM customization empowers businesses to drive growth, streamline operations, and deliver exceptional experiences to their clients.',
+      icon: 'flat-color-icons:document',
+    },
+    {
+      title: 'Advic.io',
+      description:
+        `Advic.io provides expert CRM consulting services tailored to meet the specific needs of each customer. Our experienced consultants work closely with your team to understand your business goals and challenges. Through in-depth analysis, we recommend the most suitable CRM strategy, platform selection, and implementation roadmap. Whether it's optimizing existing CRM systems, guiding data migration, or enhancing sales and marketing processes, our consulting services ensure seamless integration and efficient workflows. With a customer-centric approach and ongoing support, we empower businesses to harness the full potential of CRM technology, enhance customer relationships, and drive long-term success.`,
+      icon: 'flat-color-icons:template',
+    },
+    {
+      title: 'Sales and marketing automation via CRM ',
+      description:
+        'Sales and marketing automation via CRM streamlines lead management, automates email marketing campaigns, and optimizes the sales pipeline. It facilitates customer segmentation, lead nurturing, and data analytics for data-driven decisions. CRM automation integrates with social media, enhances customer support, and automates workflows for increased efficiency. By automating repetitive tasks and delivering targeted content, businesses can boost productivity, engage customers effectively, and drive revenue growth.',
+      icon: 'flat-color-icons:voice-presentation',
+    },
+  ]}
+>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Features2>
+
+</Layout>

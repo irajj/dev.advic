@@ -1,0 +1,37 @@
+---
+// import { SITE } from '~/utils/config';
+import Image from '~/components/common/Image.astro';
+
+export interface Props {
+  id?: string;
+  title?: string;
+  subtitle?: string;
+  tagline?: string;
+  content?: string;
+  image?: string | any; // TODO: find HTMLElementProps
+}
+
+const { image = await Astro.slots.render('image') } = Astro.props;
+---
+
+<div class="min-w-max inline-flex relative">
+  <a href="/" class="relative flex"
+    ><div class="w-18 h-12 flex">
+      <Image
+      class="mr-3"
+      sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+      loading="eager"
+      {...image}
+    />      
+      
+    </div><div class="flex flex-col text-lg font-semibold text-heading-1">
+      <div style="font-size: 26px;letter-spacing: 9px;text-align: center;">ADVIC</div><div style="font-size: 15px;position: relative; top: -5px;">
+        Your Path to Excellence
+      </div>
+    </div></a
+  >
+</div>
+<!--
+   <span class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">
+    🚀 {SITE?.name}
+  </span> -->

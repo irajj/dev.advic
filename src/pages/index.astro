@@ -1,0 +1,320 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+
+// import Hero from '~/components/widgets/Hero.astro';
+// import Note from '~/components/widgets/Note.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+import Content from '~/components/widgets/Content.astro';
+
+
+// import Image from '~/components/common/Image.astro';
+// import Contact from './contact.astro';
+
+// import Container from '../components/MyCustomComponents/Container.astro';
+// import Paragraph from '../components/MyCustomComponents/Paragraph.astro';
+// import Heading from '../components/MyCustomComponents/Heading.astro';
+// import Button from '../components/MyCustomComponents/Button.astro
+// import MyCustomImageHolder from '../components/MyCustomComponents/MyCustomImageHolder.astro';
+// import AboutUs from '../components/MyCustomComponents/AboutUs.astro';
+// import Info from '../components/MyCustomComponents/Info.astro';
+// import Paragraph from '../components/MyCustomComponents/Paragraph.astro';
+// import MyCarousal from '../components/MyCustomComponents/MyCarousal.astro';
+
+import HowWeWork from '../components/MyCustomComponents/HowWeWork.astro';
+
+const metadata = {
+  title: 'Advic- Home',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HOME Casrousal-->
+  <swiper-container
+    class="mySwiper"
+    pagination="true"
+    pagination-clickable="true"
+    navigation="true"
+    space-between="30"
+    centered-slides="true"
+    autoplay-delay="5000"
+    autoplay-disable-on-interaction="false"
+  >
+    <swiper-slide>
+      <Content
+        cssbg
+        image={{
+          src: '~/assets/images/A-Comprehensive-Guide-to-CRM-Software.jpg',
+          alt: 'CRm Image',
+        }}
+      >
+        <Fragment slot="content">
+          <h4 class="tag title_24" data-astro-cid-o64oakgl="">
+            <font
+              style="font-weight:bolder; font-size:18px; letter-spacing:0.20em;"
+              class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600"
+              >UNLEASHING POTENTIAL THROUGH AGILITY</font
+            >
+          </h4>
+          <h1
+            class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight
+               font-bold text-heading-1"
+          >
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600"
+            ></span>Innovate, Integrate, Inspire
+          </h1>
+          <p class="md:text-lg text-heading-3 mt-8">
+            Seamlessly integrate sales, marketing, and customer service to unlock insights and take your business to the
+            next level of efficiency and innovation
+          </p>
+        </Fragment>
+
+        <Fragment slot="bg">
+          <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+      </Content>
+    </swiper-slide>
+
+    <swiper-slide>
+      <Content
+        isReversed
+        image={{
+          src: '~/assets/images/d365-tech.jpeg',
+          alt: 'CRm Image',
+        }}
+      >
+        <Fragment slot="content">
+          <h4 class="tag title_24" data-astro-cid-o64oakgl="">
+            <font style="font-weight:bold; font-size: 30px;" class="via-primary via-30% to-green-600"
+              >Experience the Power of Dynamics 365 for Your Business</font
+            >
+          </h4>
+          <h1
+            class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight
+               font-bold text-heading-1"
+          >
+          </h1>
+          <p class="md:text-lg text-heading-3 mt-8">
+            Did you know it takes 5 times more cost to acquire a new customer than to retain an existing one? In today's
+            competitive business landscape, customer relationship management (CRM) is the key to success. Dynamics 365
+            offers a comprehensive solution to manage your customers more efficiently and drive increased profitability.
+          </p>
+        </Fragment>
+
+        <Fragment slot="bg">
+          <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+      </Content>
+    </swiper-slide>
+
+    <swiper-slide>
+      <Content
+        image={{
+          src: '~/assets/images/antonio-janeski-KpIpjje1Mxk-unsplash.jpg',
+          alt: 'CRm Image',
+        }}
+      >
+        <Fragment slot="content">
+          <h4 class="tag title_24" data-astro-cid-o64oakgl="">
+            <font style="font-weight:bold; font-size: 30px;" class="via-primary via-30% to-green-600"
+              >Discover Our Process for Delivering Excellence</font
+            >
+          </h4>
+          <h1
+            class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight
+               font-bold text-heading-1"
+          >
+          </h1>
+          <p class="md:text-lg text-heading-3 mt-8">
+            At Advic, we take pride in our systematic approach to deliver top-notch services to our clients. Our
+            commitment to excellence is reflected in our comprehensive work process, which is designed to ensure your
+            satisfaction at every step of the way
+          </p>
+        </Fragment>
+
+        <Fragment slot="bg">
+          <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+        </Fragment>
+      </Content>
+    </swiper-slide>
+  </swiper-container>
+
+  <!-- HOME END -->
+
+  <!-- ABOUT US START -->
+
+  <Content 
+    isReversed
+    image={{
+      src: '~/assets/images/dev-with-c-1.webp',
+      alt: 'CRm Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h1 class="text-heading-1 font-semibold text-2xl sm:text-3xl md:text-4xl mb-1">
+        We help drive your business forward faster
+      </h1>
+
+      <div class="mb-2">
+        At advic.io, we believe that the success of any business hinges on building and nurturing strong customer
+        relationships That's why we provide exceptional CRM software solutions tailored specifically for Microsoft
+        Dynamics and Salesforce Our mission is simple: to empower businesses of all sizes to streamline their
+        operations, drive sales growth, and create lasting connections with their valued customers
+      </div>
+
+      <div class="flex flex-row items-center gap-4 md:max-w">
+        <div
+          class="p-5 sm:p-6 lg:p-3 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden"
+        >
+          <div class="rounded-xl bg-gray-300 dark:bg-gray-950 p-3 text-heading-1 w-max relative">
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-4 h-4 sm:w-5 sm:h-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+              </svg>
+            </span>
+          </div>
+          <h2 class="md:text-xl font-semibold text-heading-2 mt-6 mb-2" style="font-size: 20px;">Mission</h2>
+          <p class="text-1xl text-gray-900 dark:text-white" style="font-size: 15px;">
+            Advic: delivering innovative software solutions for streamlined workflows and growth.
+          </p>
+        </div>
+
+        <div
+          class="p-5 sm:p-6 lg:p-3 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow relative overflow-hidden"
+        >
+          <div class="rounded-xl bg-gray-300 dark:bg-gray-950 p-3 text-heading-1 w-max relative">
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-4 h-4 sm:w-5 sm:h-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
+              </svg>
+            </span>
+          </div>
+          <h2 class="md:text-xl font-semibold text-heading-2 mt-6 mb-2" style="font-size: 20px;">Vision</h2>
+          <p class="text-1xl text-gray-900 dark:text-white" style="font-size: 15px;">
+            Empowering businesses with tech-edge solutions to thrive in today's dynamic world.
+          </p>
+        </div>
+      </div>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- ABOUT US END -->
+
+  <!-- HOW WE WORK START -->
+
+  <HowWeWork
+    
+    image={{
+      src: 'https://preview.colorlib.com/theme/startup2/img/work/work.png.webp',
+      alt: 'CRm Image',
+    }}
+  >
+    <Fragment slot="mycustomcontent">
+    
+    <div class="row">
+      <div class="col-4 col-md-4">
+        <h1 class="">How we work</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 col-md-4">
+        <span class=""> "Function information without cross action media value".</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4  col-md-4">
+        <font class="">
+          Efficiently unleash cross-media tour function information without cross action media value. Quickly maximize timely deliverables for real-time schemas.
+        </font>
+      </div>
+    </div>
+    
+    </Fragment>
+  </HowWeWork>
+
+    <!-- Features2 Widget ************** -->
+
+    <Features2
+    title="What services do we provide?"
+    subtitle="At Advic,u we specialize in providing a wide range of services in the realms of AI, Microsoft Dynamics 365, and Salesforce. Our offerings encompass AI-driven solutions, custom D365 implementations, and Salesforce integrations, all tailored to meet your specific business needs. We leverage cutting-edge technologies and expert insights to empower your organization, streamline operations, and drive growth."
+    items={[
+      {
+        title: 'Microsoft Dynamics 365 (D365)',
+        description:
+          'Unlock the full potential of your business with our tailored D365 services. We provide comprehensive implementation, customization, and support to optimize your CRM and ERP systems, helping you manage customer relationships and business operations efficiently.',
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Salesforce Services',
+        description:
+          `Elevate your sales and customer relationship management with our Salesforce services. Our experts are well-versed in Salesforce's capabilities, offering custom solutions, integrations, and support to boost your sales productivity and improve customer engagement.`,
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'AI Services',
+        description:
+          'Providing customer support for any technical issues related to the templates or their implementation.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+</Layout>
+
+<style>
+  swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  swiper-slide {
+    /* text-align: center; */
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>

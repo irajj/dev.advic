@@ -1,0 +1,161 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Steps from '~/components/widgets/Steps.astro';
+
+const metadata = {
+  title: 'About Us',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="About US "
+    title=""
+    subtitle="At Advic, we are more than just a business. We are a team of dedicated professionals with a shared passion for [your industry or mission."
+    image={{
+      src: '~/assets/images/Customer-Centric-Focus.jpg',
+      alt: 'AstroWind Hero Image',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Your Success, Our Priority"
+    subtitle="At Advic, we take pride in being your partner on the journey to success. Our diverse templates are just one way we demonstrate our commitment to your growth and prosperity."
+    columns={3}
+    items={[
+      {
+        title: 'Innovation and Technology',
+        description:
+          'We are committed to staying at the forefront of technological advancements in AI and CRM platforms. Our goal is to continuously innovate and develop cutting-edge features, harnessing the power of artificial intelligence and data analytics to empower our users with valuable insights and tools',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'User Experience',
+        description:
+          'User experience is paramount in our approach. We aim to create intuitive and user-friendly software that requires minimal training, making it accessible and enjoyable for businesses of all sizes, from startups to enterprises.',
+        icon: 'tabler:home-star',
+      },
+      {
+        title: 'Partnership and Collaboration',
+        description: `EWe believe in the strength of partnerships and collaboration. we build strong relationships with our clients, business partners, and the consultants to foster a collaborative environment and foster mutual growth.`,
+        icon: 'tabler:photo',
+      },
+      {
+        title: 'Global Reach',
+        description:
+          'We aspire to expand our reach and impact worldwide. Advic likes to serve businesses across different industries and regions, supporting their needs and contributing to their global success.',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'Continuous Improvement',
+        description:
+          'Advancing our software solutions is an ongoing commitment. We are dedicated to continuously improve through client feedback, and user insights to adapt to the evolving needs of our clients.',
+        icon: 'tabler:article',
+      },
+      {
+        title: 'Corporate Social Responsibility',
+        description:
+          'We recognize our responsibility to society and the environment. Our goal is to contribute positively to the communities we serve, promoting sustainable practices and social initiatives that create a positive impact.',
+        icon: 'tabler:building-store',
+      },
+    ]}
+  />
+
+  
+
+  <!-- Testimonials Widget *********** -->
+
+  <!-- <Testimonials
+    title="Words from real customers"
+    testimonials={[
+      {
+        testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
+        name: 'Emily Kennedy',
+        job: 'Front-end developer',
+        image: {
+          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
+          alt: 'Emily Kennedy Image',
+        },
+      },
+      {
+        testimonial: `It beautifully showcases my work, with its clean and elegant design that lets my photographs shine. Customization was a breeze, even for a non-tech person like me. The result is a professional and immersive portfolio that's garnered numerous compliments.`,
+        name: 'Sarah Hansen',
+        job: 'Photographer',
+        image: {
+          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Sarah Hansen Image',
+        },
+      },
+      {
+        testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`,
+        name: 'Mark Wilkinson',
+        job: 'Small business owner',
+        image: {
+          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
+          alt: 'Mark Wilkinson Image',
+        },
+      },
+    ]}
+    callToAction={{
+      target: '_blank',
+      text: 'More testimonials...',
+      href: 'https://github.com/onwidget/astrowind',
+      icon: 'tabler:chevron-right',
+    }}
+  /> -->
+
+  <!-- CallToAction Widget *********** -->
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="We are passionate learners and experienced innovators. Collectively, we have the capacity to craft solutions that cater not only to technology but also to the people it impacts."
+    items={[
+      {
+        title: '<span class="font-medium">Punctual and Excellence in Delivery</span>',
+        description:
+          "We meticulously map out your project's journey from software creation to real-time application testing, prioritizing top-notch results, often surpassing expectations well before the deadline.",
+        icon: 'tabler:package',
+      },
+      {
+        title: '<span class="font-medium">Unyielding Entrepreneurial Spirit</em>',
+        description:
+          "At Advic, we're all achievers, fostering a relentlessly positive outlook on each project. Whether faced with challenges or obstacles, our team consistently harnesses their skills to uncover viable solutions.",
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: '<span class="font-medium">Diverse Digital Proficiency</span>',
+        description:
+          'Advic is home to a talented team with extensive and distinguished backgrounds in cutting-edge technologies, including Microsoft Dynamics 365, Opensource, Frontend development, and more.',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Ready!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: "Let's Connect",
+        href: '/',
+      },
+    ]}
+    title="Join Us and Flourish    "
+    subtitle="Embrace innovation with the most cutting-edge technologies and engage in exciting projects beyond your imagination. "
+  />
+</Layout>

@@ -1,0 +1,179 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import AstroComponent from '~/components/widgets/AstroComponent.astro';
+
+const metadata = {
+  title: 'Contact',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- MORTGAGE INDUSTRY **************** -->
+  <AstroComponent
+    title="Case Studies"
+    subtitle="Revolutionizing Customer Insights with Predictive Analytics."
+    isReversed
+    items={[
+      {
+        title: 'Problem:',
+        description: `
+        <ul>
+            <li class="mb-2" style="list-style:disc;">A Comergence license is very costly, also the client uses only limited functions of it and still pays the full license cost. Also, Comergence is not customizable to client’s various needs, and they needed to live with limitations</li>
+            <li class="mb-2" style="list-style:disc;">the client expected to implement these limited functionalities as new custom software. This new software will be used to manage information related to brokerage houses/brokers and provide do it yourself (DIY) system for brokerage houses and brokers.</li>
+            <li class="mb-2" style="list-style:disc;">the software shall be SaaS based and easy to customize, easy to extend with any new functionalities to be implemented quickly.</li>
+            <li class="mb-2" style="list-style:disc;">List of functionalities expected in this new system.</li>
+            <li class="mb-2" style="list-style:disc;">Brokers registration, Record broker details, log in with their NMLS record verified through the compliance verification portal (integration needed) and Allow brokers to upload compliance documents.</li>
+            <li class="mb-2" style="list-style:disc;">New software required integration with Encompass for data push and the challenge was Encompass does not have any API integration available. Currently, the client team needs to do manual export/import of this data.</li>
+            <li class="mb-2" style="list-style:disc;">The new software should provide integration with Click Dimension for keeping Broker House’s data in sync for ongoing marketing campaigns & operations.</li>
+            <li class="mb-2" style="list-style:disc;">Currently, Broker House data is being downloaded manually from the brokers' consortium portal and it is inserted into the client system manually (this is done quarterly basis), it consumes an enormous time of client’s staff. Now, the client expects to automate this process & reduce the effort and improve the quality of data processing.</li>
+            <li class="mb-2" style="list-style:disc;">the size of the data is huge, so automated processing needs to be performance optimized.</li>
+            <li class="mb-2" style="list-style:disc;">Require an interface for the broker to upload their compliance documents and agreements rather than collecting those from brokers and maintaining them on their own. Those documents need to be reviewed by the client manually for system compliance.</li>
+            <li class="mb-2" style="list-style:disc;">The client needs to download brokers' compliance documents to view them. Client wishes to avoid downloading documents, they want to view the documents within the browser and not require any third-party software for viewing.</li>
+        </ul>
+        `,
+      },
+      {
+        title: 'Solutions:',
+        description: `
+        <ul>
+            <li class="mb-2" style="list-style:disc;">The advice.io team provided consulting to the client and suggested opting for Dynamics 365 to achieve various benefits.</li>
+            <li class="mb-2" style="list-style:disc;">We helped the client is maintaining the backed data in Dynamics 365 and this central data would serve both Encompass and Click Dimensions.</li>
+            <li class="mb-2" style="list-style:disc;">The client was now able to track brokers' data in D365.</li>
+            <li class="mb-2" style="list-style:disc;">Our CRM experts provided consultation to the client in integrating Click Dimensions for marketing campaigns.</li>
+            <li class="mb-2" style="list-style:disc;">We also implemented power automate flows to process these huge file's data automatically and optimized the performance of its code.</li>
+            <li class="mb-2" style="list-style:disc;">Implemented RPA (Remote Process Automation) for pushing the brokers' data to encompass from dynamics 365, which was one of the creative approaches where no other solution was possible.</li>
+            <li class="mb-2" style="list-style:disc;">We also created do it yourself (DIY) custom portal for the unique need of our clients helping them upload & view various brokers' compliance documents using the Oracle Jet framework.</li>
+            <li class="mb-2" style="list-style:disc;">The client was now able to access the documents using inbuilt SharePoint rather than downloading it.</li>
+        </ul>
+      `,
+      },
+      {
+        title: 'Benefits:',
+        description: `
+        <ul>
+            <li class="mb-2" style="list-style:disc;">Reduced licensing costs up to 10k USD monthly.</li>
+            <li class="mb-2" style="list-style:disc;">Now the client has flexible software for any enhancements done quickly.</li>
+            <li class="mb-2" style="list-style:disc;">Because of D365 low code no code solutions, the project was delivered within half the time than it would have taken with 100% custom development.</li>
+            <li class="mb-2" style="list-style:disc;">Reduced lots of manual efforts & its major manpower costs with automation introduced as well as by data centralization.</li>
+        </ul>
+      `,
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Mortgage industry: <br />
+      </h3>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </AstroComponent>
+
+  <!-- Healthcare Industry **************** -->
+  <AstroComponent
+    isReversed
+    items={[
+      {
+        title: 'Problem:',
+        description: `
+        <ul>
+            <li class="mb-2" style="list-style:disc;">The client required a solution to track rooms, doctors, masks, medicines availability in hospitals during COVID </li>
+            <li class="mb-2" style="list-style:disc;"> Remove paper-based check-ins, check-out process for faster processing </li>
+            <li class="mb-2" style="list-style:disc;"> Required a system to notify hospitals regarding the empty beds and doctors' availability in real time for better planning and deployment of resources </li>
+            <li class="mb-2" style="list-style:disc;"> Client also wanted to gather patient feedback via customizable surveys paper less  </li>
+            <li class="mb-2" style="list-style:disc;">The client was looking for a custom solution to overcome certain challenges related to tracking rooms, checking doctors’ availability, tracking masks quantity, ICU beds & medicines availability in hospitals, especially during the time of COVID-19.</li>
+            <li class="mb-2" style="list-style:disc;">They were using multiple spreadsheets for tracking, requiring each user to manually input their data in CRM.</li>
+            <li class="mb-2" style="list-style:disc;">The client wanted an easy-to-use solution that would provide a high level of security for personal data.</li>
+            <li class="mb-2" style="list-style:disc;">Required a system to notify hospitals regarding empty beds and doctors' availability in real-time.</li>
+            <li class="mb-2" style="list-style:disc;"> Client was looking for a dashboard application that could offer them all the needed details.</li>
+            <li class="mb-2" style="list-style:disc;">Need to load and analyze data-driven visualization to look at patient-related information based on different parameters.</li>
+            <li class="mb-2" style="list-style:disc;">Email/SMS sending functionalities and integration with the shared mailbox.</li>
+        </ul>
+        `,
+      },
+      {
+        title: 'Solutions:',
+        description: `
+        <ul>
+            <li class="mb-2" style="list-style:disc;"> Developed COVID-tracking solution using Power Apps Platform </li>
+            <li class="mb-2" style="list-style:disc;"> Created dashboards to track the live updates of the hospitals </li>
+            <li class="mb-2" style="list-style:disc;"> Automated the manual process </li>
+            <li class="mb-2" style="list-style:disc;"> Using Microsoft's power automate reporting and approval workflow was made faster </li>
+            <li class="mb-2" style="list-style:disc;">The new system allows scheduling and tracking patients, sending automated notifications for important events and asking patients for feedback over customizable surveys</li>
+            <li class="mb-2" style="list-style:disc;">We understood the client's requirements and offered them an effective Power BI Dashboard solution that helped the client to monitor and manage all their patients and healthcare units with ease and security.</li>
+            <li class="mb-2" style="list-style:disc;">Interactive dashboards present real-time data which allows you to oversee divisions, risk levels, types of treatments, average wait times, doctor statistics, satisfaction, scorecards, and much more.</li>
+            <li class="mb-2" style="list-style:disc;">We developed a customized healthcare resources tracking solution.</li>
+            <li class="mb-2" style="list-style:disc;">Developed a model-driven app using power apps & implementing automation for adding and processing huge data files.</li>
+            <li class="mb-2" style="list-style:disc;">Implemented Power BI, to generate custom reports and dashboards aligned to different user needs across the company’s departments.</li>
+            <li class="mb-2" style="list-style:disc;">With the delivered business intelligence solution, the client could embrace company-wide reporting, improve planning, and optimize their internal processes and operations.</li>
+            <li class="mb-2" style="list-style:disc;">Created workflows using Power automate to send email notifications and reminders to hospitals.</li>
+        </ul>
+      `,
+      },
+      {
+        title: 'Outcomes:',
+        description: `
+        <ul>
+            <li class="mb-2" style="list-style:disc;">Providing fast and easy access, a user-friendly experience </li>
+            <li class="mb-2" style="list-style:disc;"> Reduced operational costs</li>
+            <li class="mb-2" style="list-style:disc;">Real time data helped in quick and accurate decision making to serve patient better lead to increase in revenue </li>
+            <li class="mb-2" style="list-style:disc;">Publish and share data and reports with managers or clinics to provide them with insights into their specific decision-making requirements.</li>
+            <li class="mb-2" style="list-style:disc;">Keeps your dashboards up to date consistently to save time and resources.</li>
+            <li class="mb-2" style="list-style:disc;">Make better-informed decisions: leading to saving costs and increased operational efficiency.</li>
+        </ul>
+      `,
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Healthcare Industry: <br />
+      </h3>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </AstroComponent>
+
+  
+  <!-- REAL ESTATE IDUSTRY **************** -->
+  <AstroComponent
+    items={[
+      {
+        title: 'Problem:',
+        description: `
+        <ul>
+            <li class="mb-2" style="list-style:disc;">lengthy disintegrated, time-consuming process </li>
+            <li class="mb-2" style="list-style:disc;">a lot of manual entries leading to error of omission</li>
+            <li class="mb-2" style="list-style:disc;">searching for desired property in desired location manually elongates response time </li>
+            <li class="mb-2" style="list-style:disc;">Rise in data storage cost .</li>
+            <li class="mb-2" style="list-style:disc;">usage of multiple platforms to execute business leads to increased cost .</li>
+        </ul>
+        `,
+      },
+      {
+        title: 'Solutions:',
+        description: `
+        <ul>
+            <li class="mb-2" style="list-style:disc;">Business process automation </li>
+            <li class="mb-2" style="list-style:disc;">Customized platform tailored for real estate company to carry on day-to-day operations</li>
+            <li class="mb-2" style="list-style:disc;">Added functions to manage site visit and appointments </li>
+            <li class="mb-2" style="list-style:disc;">Single platform for application and storage results in to reduced cost </li>
+            <li class="mb-2" style="list-style:disc;">Reduced cost with fast smooth business process resulted in to increased productivity </li>
+        </ul>
+      `,
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Real Estate Industry: <br />
+      </h3>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </AstroComponent>
+
+</Layout>

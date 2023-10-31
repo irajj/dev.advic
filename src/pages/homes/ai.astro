@@ -1,0 +1,45 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Container from '~/components/MyCustomComponents/Container.astro';
+import Paragraph from '~/components/MyCustomComponents/Container.astro';
+import Image from '~/components/common/Image.astro';
+import HowWeWork from '~/components/MyCustomComponents/HowWeWork.astro';
+
+const metadata = {
+  title: 'Contact',
+};
+---
+
+<Layout metadata={metadata}>
+  <Container className="space-y-20 md:sapce-y-20">
+    <header class="mx-auto max-w-3xl mb-2 md:mb-2 text-center">
+      <h1 class="" style="font-size: 40px; font-weight: bolder;">Artificial Intelligence Integration</h1><div
+        class="mx-auto dark:text-slate-400 font-medium md:mt-3 mt-2 text-gray-500 text-xl"
+      >
+      Leverage our proficiency in Artificial Intelligence to enhance business efficiency by addressing critical needs promptly. Our expertise in AI technology sets your application apart from competitors, offering cutting-edge solutions.
+      </div>
+    </header>
+  </Container>
+  <HowWeWork
+    image={{
+      src: '~/assets/images/hitesh-choudhary-t1PaIbMTJIM-unsplash.jpg',
+      alt: 'CRm Image',
+    }}
+  >
+    <Fragment slot="mycustomcontent">
+      <div class="row">
+        <div class="col-4 col-md-4">
+          <h1 class="text-heading-1 font-semibold text-2xl sm:text-3xl md:text-4xl md:mb-3">Unlocking AI's Potential</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4 col-md-4">
+          <font class="">
+            Artificial Intelligence (AI) is revolutionizing industries by mimicking human intelligence and automating complex tasks. It's the key to uncovering valuable insights from data, making data-driven decisions, and enhancing efficiency across various business processes. From predictive analytics to natural language processing, AI empowers organizations to gain a competitive edge in today's data-driven world.
+          </font>
+        </div>
+      </div>
+    </Fragment>
+  </HowWeWork>
+</Layout>

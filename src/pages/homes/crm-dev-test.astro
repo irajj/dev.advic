@@ -1,0 +1,184 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import MyCustomImage from '~/components/common/MyCustomImage.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Steps from '~/components/widgets/StepsForTestingDev.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contact',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="CRM Testing: the Essence "
+    title=""
+    subtitle="CRM testing is the process of validation that your customer relationship management system fully meets the requirements and doesn't disrupt your business processes."
+    image={{
+      src: '~/assets/images/kaleidico-7lryofJ0H9s-unsplash.jpg',
+      alt: 'AstroWind Hero Image',
+    }}
+  />
+
+  <Steps
+    title="A specific CRM testing plan will depend on the chosen sourcing model (in-house, partial or complete outsourcing), the current SDLC stage of your CRM project, and the system’s requirements. Summing ScienceSoft’s 15-year experience in CRM testing, our QA engineers share the most common stages each project will go through.."
+    items={[
+      {
+        title: '<span class="font-medium">CRM testing process design</span>',
+        description: `
+        <ul>
+            <li style="margin-bottom:20px; list-style:disc;">Duration: up to 2 weeks</li>
+            <li style="margin-bottom:10px; list-style:disc;">An assigned QA manager validates that each CRM requirement is clear, measurable, and complete.</li>
+            
+            <li style="margin-bottom:10px; list-style:disc;">Representatives of each CRM user group take part in designing the requirements specification to pave the way for efficient functional and usability testing</li>
+            <li style="margin-bottom:10px; list-style:disc;">A QA manager defines the KPIs for CRM testing and outlines the collaboration schedule for the testing and development teams</li>
+        </ul>
+        `,
+        icon: 'tabler:package',
+      },
+      {
+        title: '<span class="font-medium">CRM testing preparation</em>',
+        description: `
+        <ul>
+            <li style="margin-bottom:20px; list-style:disc;">Duration: up to 4 to 12 weeks</li>
+
+            <li style="margin-bottom:10px; list-style:disc;">Designs a CRM test strategy and plans the required project efforts</li>
+            <li style="margin-bottom:10px; list-style:disc;">Gathers a CRM testing team.</li>
+            <li style="margin-bottom:10px; list-style:disc;">Considers hiring additional testing talents (e.g., to introduce CRM test automation or handle the specifics of the chosen CRM provider)</li>
+        </ul>
+        `,
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: '<span class="font-medium">CRM testing launch</span>',
+        description: `
+        <ul>
+            <li style="margin-bottom:20px; list-style:disc;">Duration: up to 2 weeks</li>
+
+            <li style="margin-bottom:10px; list-style:disc;">Sets up and configures the test environment. For platform-based CRM solutions, a relevant test environment should be obtained from your CRM provider</li>
+            <li style="margin-bottom:10px; list-style:disc;">Starts developing test cases and test scripts.</li>
+            <li style="margin-bottom:10px; list-style:disc;">Prepares CRM test data</li>
+        </ul>
+        `,
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Ready!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  />
+
+  <Features2
+    title="ScienceSoft Recommends: Testing Types to Apply for Your CRM Testing"
+    subtitle=""
+    items={[
+      {
+        title: 'Functional testing',
+        description:
+          'Functional testing comprises the majority of the CRM testing scope. It checks whether all the required functions are present in the CRM solution and enable flawless workflows for each user role. With platform-based CRM solutions, it’s also important to validate that configurations and customizations don’t disrupt the app functioning.',
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Integration testing',
+        description:
+          `CRM’s business value significantly relies on its capability of data sharing with other enterprise applications (e.g., ERP and financial systems, an email server, a data warehouse). CRM integration testing validates that your customer data is complete, remains intact during data transfer, the introduced changes are visualized in all the connected systems.`,
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Performance testing',
+        description:
+          'Performance testing checks CRM behavior under continuous and peak load, measures the effects of multiple users working with CRM simultaneously: loading speed, response time, the maximum number of users.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+      {
+        title: 'Security testing',
+        description:
+          'CRM testing includes vulnerability assessment, role-based access control validation, and compliance testing to ensure the security of sensitive customer data and compliance with applicable regulatory standards (GDPR, PCI DSS, HIPAA, GLBA, etc.).',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+      {
+        title: 'Usability testing',
+        description:
+          'Validates the intuitive and convenient arrangement of CRM’s UI elements, content layout, and the number of usage steps with regard to the need of all CRM user groups and established usability standards and metrics.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- FIrst Section Passionate Team -->
+  <section style="margin-bottom: 5%;">
+    <div class="mx-auto max-w-7xl w-full px-5 sm:px-8 md:px-14 lg:px-5 flex flex-row midmd:flex-row gap-5 lg:gap-12">
+      <div class="flex flex-1 justify-center midmd:w-7/12 lg:w-1/2 flex-col">
+        <div class="" style="margin-top: 100px;">
+          <h1 class="text-heading-1 font-semibold text-2xl sm:text-3xl md:text-4xl">
+            IT SUPPORT - TROUBLE SHOOTING, TRAINING ETC
+          </h1><p class="md:text-lg text-heading-3 mt-8">
+            Advic.io provides comprehensive IT support services, including troubleshooting, training, and more. Our
+            experienced IT professionals are adept at resolving technical issues promptly and efficiently, ensuring
+            minimal downtime and optimal system performance. We offer personalized training sessions to equip your team
+            with the necessary skills to utilize IT tools effectively. Whether it's software, hardware, or
+            network-related problems, we are committed to delivering reliable solutions. With Advic.io as your IT
+            support partner, you can rest assured that your technology infrastructure is in capable hands, allowing you
+            to focus on your core business and achieve greater productivity and efficiency
+            <br /><br /><br />
+          </p>
+        </div>
+      </div>
+      <div
+        class="max-w-full mx-auto midmd:max-w-none lg:mx-0 lg:pr-10 xl:pr-2 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2 midmd:h-auto"
+      >
+        <div class="w-full h-80 sm:h-96 midmd:h-full relative">
+          <MyCustomImage
+            class="left-1/2 -translate-x-1/2 absolute bottom-0 max-h-full"
+            style="max-width: 31vw;"
+            src="~/assets/images/thisisengineering-raeng-0gYq67rIK8s-unsplash.jpg"
+            alt="CRm Image"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-bottom: 5%;">
+    <div class="mx-auto max-w-7xl w-full px-5 sm:px-8 md:px-14 lg:px-5 flex flex-row midmd:flex-row gap-5 lg:gap-12">
+      <div
+        class="max-w-full mx-auto midmd:max-w-none lg:mx-0 lg:pr-10 xl:pr-2 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2 midmd:h-auto"
+      >
+        <div class="w-full h-80 sm:h-96 midmd:h-full relative">
+          <MyCustomImage
+            class="left-1/2 -translate-x-1/2 absolute bottom-0 max-h-full"
+            style="max-width: 31vw;"
+            src="~/assets/images/austin-distel-jpHw8ndwJ_Q-unsplash.jpg"
+            alt="CRm Image"
+          />
+        </div>
+      </div>
+      <div class="flex flex-1 justify-center midmd:w-7/12 lg:w-1/2 flex-col">
+        <div class="" style="margin-top: 100px;">
+          <h1 class="text-heading-1 font-semibold text-2xl sm:text-3xl md:text-4xl">
+            iT STRATEGY CONSULTANCY - OPERATION, PRACTISE, TECHNOLOGY, PLANNING AND IMPLIMENTATION
+          </h1><p class="md:text-lg text-heading-3 mt-8">
+            Advic.io offers expert IT strategy consultancy services encompassing operations, best practices, technology,
+            planning, and implementation. We work closely with your organization to assess your current IT landscape and
+            business objectives. With a deep understanding of your unique requirements, we formulate a comprehensive IT
+            strategy that aligns technology with your long-term goals. Our experts guide you in adopting best practices,
+            optimizing IT operations, and implementing the latest technologies. From strategic planning to seamless
+            implementation, we ensure your IT initiatives are successful, enabling you to drive innovation, enhance
+            efficiency, and achieve sustainable growth in the dynamic digital landscape
+            <br /><br /><br />
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

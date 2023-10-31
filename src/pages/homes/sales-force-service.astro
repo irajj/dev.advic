@@ -1,0 +1,53 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Container from '~/components/MyCustomComponents/Container.astro';
+import Paragraph from '~/components/MyCustomComponents/Container.astro';
+import Image from '~/components/common/Image.astro';
+import HowWeWork from '~/components/MyCustomComponents/HowWeWork.astro';
+
+const metadata = {
+  title: 'Contact',
+};
+---
+
+<Layout metadata={metadata}>
+  <Container className="space-y-20 md:sapce-y-20">
+    <header class="mx-auto max-w-3xl mb-2 md:mb-2 text-center">
+      <h1 class="" style="font-size: 40px; font-weight: bolder;">SalesForce Proficiency</h1><div
+        class="mx-auto dark:text-slate-400 font-medium md:mt-3 mt-2 text-gray-500 text-xl"
+      >
+        Maximize business efficiency by promptly tackling essential needs with our Platform mastery, setting your
+        application apart from competitors.
+      </div>
+    </header>
+  </Container>
+  <HowWeWork
+    image={{
+      src: '~/assets/images/salesforce-tech.jpeg',
+      alt: 'CRm Image',
+    }}
+  >
+    <Fragment slot="mycustomcontent">
+      <div class="row">
+        <div class="col-4 col-md-4">
+          <h1 class="text-heading-1 font-semibold text-2xl sm:text-3xl md:text-4xl md:mb-3">SalesForce</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4 col-md-4">
+          <font class="">
+            Salesforce CRM is a leading cloud-based customer relationship management (CRM) software solution that helps
+            businesses manage and automate sales, marketing, and customer service processes. It provides a unified
+            platform for capturing and tracking leads, managing opportunities, and nurturing customer relationships.
+            Salesforce CRM offers powerful analytics and reporting capabilities, allowing businesses to gain valuable
+            insights into sales performance and customer behavior. With extensive customization options and integrations
+            with third-party applications, Salesforce CRM can be tailored to meet the unique needs of different
+            industries and organizations. Its user-friendly interface, scalability, and continuous updates make it a
+            preferred choice for businesses seeking to optimize sales and customer engagement.
+          </font>
+        </div>
+      </div>
+    </Fragment>
+  </HowWeWork>
+</Layout>

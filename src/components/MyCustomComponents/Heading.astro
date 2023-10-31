@@ -1,0 +1,32 @@
+---
+export interface Props{
+    headingText?:string
+}
+const { headingText } = Astro.props;
+---
+<h4 class="tag title_24">
+    <font style="font-weight:bolder;" class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">{headingText.toUpperCase()}</font>
+</h4>
+
+<style>
+    .title_24 {
+        font-size: 16px;
+        line-height: 34px;
+        font-family: Montserrat, sans-serif;
+        color: #111;
+        margin-bottom: 10px;
+        font-weight: 600;
+        letter-spacing:-0.00em !important;
+    }
+
+    .banner_header_section.new_home_banner
+        .banner_header
+        .left
+        .top_content
+        .tag {
+        color: #d7570f;
+        font-weight: 600;
+        font-style: italic;
+        margin-bottom: 6px;
+    }
+</style>
